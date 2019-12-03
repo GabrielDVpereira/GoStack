@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>GO STAAAACK</title>
+  </head>
+  <body>
+    <input type="text" name="nome" />
+    <button onclick="add()">ADD</button>
+    <ul></ul>
+  </body>
+
+  <script>
+    const nomes = ["Diego", "Gabriel", "Lucas"];
+    nomes.forEach(nome => {
+      const li = createLi(nome);
+      appendLu(li);
+    });
+
+    function createLi(nome) {
+      let li = document.createElement("li");
+      const nome_li = document.createTextNode(nome);
+
+      li.appendChild(nome_li);
+
+      return li;
+    }
+
+    function appendLu(li) {
+      const ul = document.querySelector("ul");
+      ul.appendChild(li);
+    }
+
+    function add() {
+      const input = document.querySelector("input[name=nome]");
+      const newName = input.value;
+
+      const newLi = createLi(newName);
+      appendLu(newLi);
+
+      input.value = "";
+    }
+  </script>
+</html>

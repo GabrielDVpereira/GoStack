@@ -1,0 +1,31 @@
+<! DOCTYPE html >
+
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>GO STAAAAACK!</title>
+  </head>
+  <body>
+    <button>Click to create square</button>
+    <div id="square-space"></div>
+  </body>
+
+  <script>
+    const button = document.querySelector("button");
+
+    button.onclick = () => {
+      const square = createSquare();
+      const squareSpace = document.querySelector("div#square-space");
+      squareSpace.appendChild(square);
+    };
+
+    function createSquare() {
+      const square = document.createElement("div");
+      square.style.width = 100;
+      square.style.height = 100;
+      square.style.backgroundColor = "red";
+      square.style.margin = 5;
+      return square;
+    }
+  </script>
+</html>

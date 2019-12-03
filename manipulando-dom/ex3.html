@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>GO STAAAACK</title>
+  </head>
+  <body>
+    <ul></ul>
+  </body>
+
+  <script>
+    const nomes = ["Diego", "Gabriel", "Lucas"];
+    nomes.forEach(nome => {
+      const li = createLi(nome);
+      const ul = document.querySelector("ul");
+      ul.appendChild(li);
+    });
+
+    function createLi(nome) {
+      let li = document.createElement("li");
+      const nome_li = document.createTextNode(nome);
+      li.appendChild(nome_li);
+      return li;
+    }
+  </script>
+</html>
