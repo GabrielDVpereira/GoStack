@@ -18,15 +18,6 @@
       appendLu(li);
     });
 
-    function createLi(nome) {
-      let li = document.createElement("li");
-      const nome_li = document.createTextNode(nome);
-
-      li.appendChild(nome_li);
-
-      return li;
-    }
-
     function appendLu(li) {
       const ul = document.querySelector("ul");
       ul.appendChild(li);
@@ -40,6 +31,15 @@
       appendLu(newLi);
 
       input.value = "";
+    }
+
+    function createLi(nome) {
+      let li = document.createElement("li");
+      const nome_li = document.createTextNode(nome);
+
+      li.appendChild(nome_li);
+
+      return li;
     }
   </script>
 </html>
