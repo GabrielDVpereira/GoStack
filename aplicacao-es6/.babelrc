@@ -1,0 +1,7 @@
+{
+  "presets": ["@babel/preset-env"], // identifica o ambiente para convertero JS para versões de todos os env
+  "plugins": [
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-transform-async-to-generator"
+  ]
+}
